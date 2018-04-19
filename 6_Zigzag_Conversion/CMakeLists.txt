@@ -1,13 +1,15 @@
-set(Main_SRCS
-    main.cpp
+set(libSol_SRCS
+    solution.h
+    solution.cpp
 )
 
-add_executable(solution
-    ${Main_SRCS}
+# Declare the library
+add_library(libSol STATIC
+    ${libSol_SRCS}
 )
 
-# Specify here the libraries this program depends on
-target_link_libraries(solution
+# Specify here the include directories exported
+# by this library
+target_include_directories(libSol PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
-
-install(TARGETS solution DESTINATION bin)
