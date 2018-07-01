@@ -1,11 +1,9 @@
-set(libSol_SRCS
-    solution.h
-    solution.cpp
-)
+file(GLOB libSol_HDRS inlcude/*.h)
+file(GLOB libSol_SRCS src/*.cpp)
 
 # Declare the library
 add_library(libSol STATIC
-    ${libSol_SRCS}
+    ${libSol_SRCS} ${libSol_HDRS}
 )
 
 # Specify here the include directories exported
