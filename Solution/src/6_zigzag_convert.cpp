@@ -1,4 +1,4 @@
-#include "solution.h"
+#include "../include/solution.h"
 
 #define DEBUG 0
 #define debug_print(fmt, ...) \
