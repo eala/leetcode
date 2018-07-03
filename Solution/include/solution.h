@@ -10,10 +10,17 @@
 
 using namespace std;
 
+struct ListNode {
+   int val;
+   ListNode *next;
+   ListNode(int x) : val(x), next(NULL) {}
+};
+
 class Solution{
 public:
     string convert(string s, int numRows);
     vector<int> twoSum(vector<int>& nums, int target); 
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
 };
 
 #endif
