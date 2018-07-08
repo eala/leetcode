@@ -1,6 +1,7 @@
 #include <vector>
 #include "include/solution.h"
 #include "testSolution.h"
+#include "LeetcodeConfig.h"
 
 //using ::testing::Return;
 using namespace std;
@@ -62,4 +63,5 @@ TEST(ZigZag_Conversion_Test, TestTwoRowABC) {
 TEST(ZigZag_Conversion_Test, TestABCDEF) {
     Solution sol;
     EXPECT_STREQ(sol.convert("ABCDEF", 5).c_str(), "ABCDFE");
+    cout << "library version: " << LEETCODE_VERSION_MAJOR << "." << LEETCODE_VERSION_MINOR << endl;
 }

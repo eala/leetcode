@@ -1,13 +1,19 @@
-file(GLOB libSol_HDRS inlcude/*.h)
-file(GLOB libSol_SRCS src/*.cpp)
+file(GLOB Sol_HDRS inlcude/*.h)
+file(GLOB Sol_SRCS src/*.cpp)
 
 # Declare the library
-add_library(libSol STATIC
-    ${libSol_SRCS} ${libSol_HDRS}
+#add_library(Sol STATIC
+add_library(Sol SHARED
+    ${Sol_SRCS} ${Sol_HDRS}
 )
 
-# Specify here the include directories exported
-# by this library
-target_include_directories(libSol PUBLIC
+set(LEETCODE_VERSION_STRING ${LEETCODE_VERSION_MAJOR}.${LEETCODE_VERSION_MINOR}.${LEETCODE_VERSION_PATCH})
+
+set_target_properties(Sol PROPERTIES
+    VERSION ${LEETCODE_VERSION_STRING}
+    SOVERSION ${LEETCODE_VERSION_MAJOR}
+)
+
+target_include_directories(Sol PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
