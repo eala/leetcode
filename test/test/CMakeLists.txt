@@ -1,11 +1,15 @@
-file(GLOB SRCS *.cpp)
+file(GLOB SRCS *.cpp *.h)
 
-ADD_EXECUTABLE(testSolution ${SRCS})
+add_executable(testSolution ${SRCS})
 
-TARGET_LINK_LIBRARIES(testSolution
+target_link_libraries(testSolution
     Sol
     libgtest
     libgmock
+)
+
+target_include_directories(testSolution PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 include_directories(${PROJECT_BINARY_DIR})

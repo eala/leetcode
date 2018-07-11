@@ -1,4 +1,5 @@
 #include "gtest/gtest.h"
+#include "solution.h"
 
 // The fixture for testing class Solution
 class SolTest : public ::testing::Test {
@@ -22,4 +23,10 @@ protected:
     // before the destructor).
     virtual void TearDown();
 
+    string convert(string s, int numRows){return sol.convert(s, numRows);}
+    vector<int> twoSum(vector<int>& nums, int target){return sol.twoSum(nums, target);}
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2){return sol.addTwoNumbers(l1, l2);}
+
+private:
+    Solution sol;
 };

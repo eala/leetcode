@@ -18,6 +18,8 @@ struct ListNode {
 
 class Solution{
 public:
+    friend class SolTest;
+    private:
     string convert(string s, int numRows);
     vector<int> twoSum(vector<int>& nums, int target); 
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);

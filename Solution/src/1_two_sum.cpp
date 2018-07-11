@@ -12,7 +12,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 */
 
-#include "include/solution.h"
+#include "solution.h"
 
 vector<int> Solution::twoSum(vector<int>& nums, int target) {
     vector<int> result;
